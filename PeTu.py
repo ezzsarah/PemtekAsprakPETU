@@ -56,6 +56,25 @@ if submitted:
         json.dump(all_data, f, ensure_ascii=False, indent=2)
     st.success("Terima kasih! P2 ❤️")
 
+st.write("---")
+st.subheader("🔒 Asprak Archieve")
+
+password = st.text_input("Masukkan password admin:", type="password")
+if password == "PASSWORD_ADMIN_YANG_KAMU_BIKIN":
+    # tampilkan semua pesan
+    if os.path.exists("pesan.json"):
+        with open("pesan.json", "r", encoding="utf-8") as f:
+            all_data = json.load(f)
+        st.write("Jumlah pesan:", len(all_data))
+        for idx, d in enumerate(all_data, 1):
+            st.write(f"**Pesan {idx}**")
+            st.write("Dari:", d.get("pengirim", "Anonim"))
+            st.write("Isi:", d.get("pesan", ""))
+            st.write("---")
+    else:
+        st.write("Not yet.")
+elif password:
+    st.error("Password salah.")
 
 
 
