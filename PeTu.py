@@ -18,7 +18,7 @@ y = (17 * np.cos(t)
 
 fig, ax = plt.subplots(figsize=(7,7))
 ax.fill(x, y, color='red', alpha=0.9)
-ax.text(0, 0, f"Selamat menamatkan pemtek P2, \nTengkyu atas kerjasamanya, \ncemungutss projeknyaa, \n{nama} 💖", fontsize=18, 
+ax.text(0, 0, f"Selamat menamatkan praktikum pemtek guyss, \nTengkyu atas kerjasamanya, \ncemungutss projeknyaa, \n{nama} 💖", fontsize=18, 
         color="white", ha='center', va='center')
 ax.set_aspect('equal')
 ax.axis('off')
@@ -27,5 +27,6 @@ st.pyplot(fig)
 # Tampilkan salam hangat di luar hati
 st.write("")
 st.markdown(f"**Asprak PeDuaa,**  \n{AsprakPeTu}")
+
 
 
