@@ -1,6 +1,8 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
+import json
+import os
 
 st.title("Pemtek A💖")
 
@@ -38,11 +40,22 @@ with st.form("form_pesan"):
     submitted = st.form_submit_button("Ngengg")
 
 if submitted:
-    st.success("Yeay udah, Trimakasiii P2.")
-    # Tampilkan pesan yang dikirim
-    st.write("**Dari:**", pengirim_pesan if pengirim_pesan else "Anonim")
-    st.write("**Kesan Pesan:**")
-    st.write(pesan)
+   # Simpan ke file JSON
+    data = {
+        "pengirim": pengirim_pesan,
+        "pesan": pesan
+    }
+    fn = "pesan.json"
+    if os.path.exists(fn):
+        with open(fn, "r", encoding="utf-8") as f:
+            all_data = json.load(f)
+    else:
+        all_data = []
+    all_data.append(data)
+    with open(fn, "w", encoding="utf-8") as f:
+        json.dump(all_data, f, ensure_ascii=False, indent=2)
+    st.success("Terima kasih! P2 ❤️")
+
 
 
 
