@@ -59,7 +59,7 @@ if submitted:
 # st.write("---")
 st.subheader("🔒 Asprak Archieve")
 
-password = st.text_input("Masukkan password admin:", type="pedua")
+password = st.text_input("Masukkan password admin:", type="password")
 if password == "PASSWORD_ADMIN_YANG_KAMU_BIKIN":
     # tampilkan semua pesan
     if os.path.exists("pesan.json"):
@@ -75,6 +75,7 @@ if password == "PASSWORD_ADMIN_YANG_KAMU_BIKIN":
         st.write("Not yet.")
 elif password:
     st.error("Password salah.")
+
 
 
 
