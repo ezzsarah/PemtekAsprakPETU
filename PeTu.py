@@ -65,9 +65,9 @@ if password == "PeDua":
     if os.path.exists("pesan.json"):
         with open("pesan.json", "r", encoding="utf-8") as f:
             all_data = json.load(f)
-        st.write("Jumlah pesan:", len(all_data))
+        st.write("Submitted:", len(all_data))
         for idx, d in enumerate(all_data, 1):
-            st.write(f"**Pesan {idx}**")
+            st.write(f"**KesanPesan {idx}**")
             st.write("Dari:", d.get("pengirim", "Anonim"))
             st.write("Isi:", d.get("pesan", ""))
             st.write("---")
@@ -75,6 +75,7 @@ if password == "PeDua":
         st.write("Not yet.")
 elif password:
     st.error("Password salah.")
+
 
 
 
