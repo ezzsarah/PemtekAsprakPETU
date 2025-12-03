@@ -37,7 +37,7 @@ st.subheader("Kesan Pesannya Gusyy 💬")
 with st.form("form_pesan"):
     pengirim_pesan = st.text_input("Nama (nama panggung):", "")
     pesan = st.text_area("Gaskkann Isi:", "", height=150)
-    submitted = st.form_submit_button("Ngengg")
+    submitted = st.form_submit_button("Submit y")
 
 if submitted:
    # Simpan ke file JSON
@@ -75,6 +75,7 @@ if password == "PeDua":
         st.write("Not yet.")
 elif password:
     st.error("Password salah.")
+
 
 
 
