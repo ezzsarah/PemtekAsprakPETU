@@ -30,19 +30,20 @@ st.markdown(f"**Asprak PeDuaa,**  \n{AsprakPeTu}")
 
 st.write("---")  # garis pembatas
 
-st.subheader("Tinggalkan kesan / pesanmu 💬")
+st.subheader("Kesan Pesannya Gusyy 💬")
 
 with st.form("form_pesan"):
-    pengirim_pesan = st.text_input("Namamu (opsional):", "")
-    pesan = st.text_area("Tulis pesannya di sini:", "", height=150)
-    submitted = st.form_submit_button("Kirim pesan")
+    pengirim_pesan = st.text_input("Nama (nama panggung):", "")
+    pesan = st.text_area("Gaskkann Isi:", "", height=150)
+    submitted = st.form_submit_button("Ngengg")
 
 if submitted:
-    st.success("Terima kasih! Pesanmu sudah dikirim.")
+    st.success("Yeay udah, Trimakasiii P2.")
     # Tampilkan pesan yang dikirim
-    st.write("**Pesan dari:**", pengirim_pesan if pengirim_pesan else "Anonim")
-    st.write("**Isi pesan:**")
+    st.write("**Dari:**", pengirim_pesan if pengirim_pesan else "Anonim")
+    st.write("**Kesan Pesan:**")
     st.write(pesan)
+
 
 
 
