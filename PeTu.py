@@ -26,5 +26,6 @@ st.pyplot(fig)
 
 # Tampilkan salam hangat di luar hati
 st.write("")
-st.markdown(f"**Pemtek A,**  \n{AsprakPeTu}")
+st.markdown(f"**Asprak PeDuaa,**  \n{AsprakPeTu}")
+
 
