@@ -18,7 +18,7 @@ y = (10 * np.cos(t)
      - 3 * np.cos(3 * t) 
      - np.cos(4 * t))
 
-fig, ax = plt.subplots(figsize=(5,5))
+fig, ax = plt.subplots(figsize=(7,6))
 ax.fill(x, y, color='red', alpha=0.9)
 ax.text(0, 0, f"Hi guyss, Selamat menamatkan \npraktikum pemtek iaa, \nTengkyu atas kerjasamanya, \nand cemungutss projeknyaa, \n{nama} ", fontsize=18, 
         color="white", ha='center', va='center')
@@ -75,6 +75,7 @@ if password == "PeDua":
         st.write("Not yet.")
 elif password:
     st.error("Password salah.")
+
 
 
 
