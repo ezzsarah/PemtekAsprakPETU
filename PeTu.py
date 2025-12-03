@@ -28,6 +28,22 @@ st.pyplot(fig)
 st.write("")
 st.markdown(f"**Asprak PeDuaa,**  \n{AsprakPeTu}")
 
+st.write("---")  # garis pembatas
+
+st.subheader("Tinggalkan kesan / pesanmu 💬")
+
+with st.form("form_pesan"):
+    pengirim_pesan = st.text_input("Namamu (opsional):", "")
+    pesan = st.text_area("Tulis pesannya di sini:", "", height=150)
+    submitted = st.form_submit_button("Kirim pesan")
+
+if submitted:
+    st.success("Terima kasih! Pesanmu sudah dikirim.")
+    # Tampilkan pesan yang dikirim
+    st.write("**Pesan dari:**", pengirim_pesan if pengirim_pesan else "Anonim")
+    st.write("**Isi pesan:**")
+    st.write(pesan)
+
 
 
 
