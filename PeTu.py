@@ -13,7 +13,7 @@ AsprakPeTu = "Irpunk_Sartaq_Gipps"
 # Gambar hati
 t = np.linspace(0, 2 * np.pi, 1000)
 x = 16 * np.sin(t)**3
-y = (10 * np.cos(t) 
+y = (12 * np.cos(t) 
      - 5 * np.cos(2 * t) 
      - 3 * np.cos(3 * t) 
      - np.cos(4 * t))
@@ -24,11 +24,13 @@ ax.text(0, 0, f"Hi guyss, Selamat menamatkan \npraktikum pemtek iaa, \nTengkyu a
         color="white", ha='center', va='center')
 ax.set_aspect('equal')
 ax.axis('off')
+st.write("")
+st.markdown(f"**Asprak PeDuaa,**  \n{AsprakPeTu}")
 st.pyplot(fig)
 
 # Tampilkan salam hangat di luar hati
-st.write("")
-st.markdown(f"**Asprak PeDuaa,**  \n{AsprakPeTu}")
+# st.write("")
+# st.markdown(f"**Asprak PeDuaa,**  \n{AsprakPeTu}")
 
 st.write("---")  # garis pembatas
 
@@ -75,6 +77,7 @@ if password == "PeDua":
         st.write("Not yet.")
 elif password:
     st.error("Password salah.")
+
 
 
 
